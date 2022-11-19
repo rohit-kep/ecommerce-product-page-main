@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./output.css">
+  <script src="./index.js" defer></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body class="w-screen h-screen flex flex-col justify-start items-center bg-orange-200">
+  
+  
+  <div class="w-[1440px] h-[900px] flex flex-col justify-start items-center bg-white">  
+  <header class="w-3/4 h-[125px] flex justify-between items-center gap-[50px] border-b-[1px] border-slate-300  mt-[25px] ">
+    <div class="flex justify-start items-center gap-[50px]">
+    <span class=" text-3xl font-bold">sneakers</span>
+
+    <nav class="flex justify-center items-center gap-[25px] text-slate-600 ">
+      <a class="py-[50px] hover:border-y-[2px] hover:border-b-orange-500 hover:border-t-white" href="http://" target="_blank" rel="noopener noreferrer"> Collections</a>
+      <a class="py-[50px] hover:border-y-[2px] hover:border-b-orange-500 hover:border-t-white" href="http://" target="_blank" rel="noopener noreferrer"> Men</a>
+      <a class="py-[50px] hover:border-y-[2px] hover:border-b-orange-500 hover:border-t-white" href="http://" target="_blank" rel="noopener noreferrer"> Women</a>
+      <a class="py-[50px] hover:border-y-[2px] hover:border-b-orange-500 hover:border-t-white" href="http://" target="_blank" rel="noopener noreferrer"> About</a>
+      <a class="py-[50px] hover:border-y-[2px] hover:border-b-orange-500 hover:border-t-white" href="http://" target="_blank" rel="noopener noreferrer"> Contact</a>
+    </nav>
+  </div>
+  <div class="flex justify-center items-center gap-[50px] relative">
+    <span id="cart" class="relative"><img class=" cursor-pointer hover:opacity-[.6]" src="./images/icon-cart.svg" alt="cart">
+    <span id="cartCounter" class="absolute left-[10px] top-[-12px] min-w-[25px] h-[15px] rounded-[10px] bg-orange-500 text-sm text-center leading-[15px] invisible">0</span>
+    </span>
+
+    <span class="block w-[54px]"><img  class="block max-w-full h-auto cursor-pointer hover:border-[2px] hover:border-orange-500 hover:rounded-full" src="./images/image-avatar.png" alt="profile"></span>
+    
+    
+    <div id="dialog" class=" absolute left-[-140px] bg-white bottom-[-275px] w-[350px]  rounded-[10px] shadow-2xl z-10 invisible">
+      <h5 class="text-xl font-bold px-[20px] py-[20px]  border-b-[1px] border-slate-300 ">cart</h5>
+      <section id="productLobby" class=" px-[20px] py-[20px] w-full flex flex-col justify-start items-start min-h-[160px] gap-[20px]">
+        <p class="text-slate-400 mx-auto my-auto">your cart is empty</p>
+      </section>
+    </div>
+  </div>
+  </header>
+  
+  <main class="w-3/4 grow flex justify-start items-center">
+    <section id="gallery" class=" flex flex-col justify-start items-center gap-[20px] px-[50px]"> 
+      <div id="display" class=" w-[446px] h-[446px]"><img class=" block max-w-full h-auto rounded-[10px]" src="./images/image-product-1.jpg" alt="shoe image"></div>
+        
+      <div id="thumbnail" class="w-[446px] h-[100px] flex justify-start items-center gap-[10px]" >
+          <div  class="grow h-full rounded-[10px]"><img draggable="false" id="image-product-1" class="rounded-[10px] max-w-full h-auto opacity-70 hover:opacity-60" src="./images/image-product-1-thumbnail.jpg" alt="thumbnail"></div>
+          <div  class="grow h-full  rounded-[10px]"><img draggable="false" id="image-product-2" class="rounded-[10px] max-w-full h-auto opacity-70 hover:opacity-60" src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2"></div>
+          <div  class="grow h-full  rounded-[10px]"><img draggable="false" id="image-product-3" class="rounded-[10px] max-w-full h-auto opacity-70 hover:opacity-60" src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3"></div>
+          <div  class="grow h-full  rounded-[10px]"><img draggable="false" id="image-product-4" class="rounded-[10px] max-w-full h-auto opacity-70 hover:opacity-60" src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4"></div>
+      </div>
+    </section>
+    <section class="px-[50px] h-full flex flex-col justify-center items-start gap-[20px]">
+      <h1 class=" font-bold uppercase text-orange-300 mt-[100px]">Sneaker Company</h1>
+
+      <h2 class=" text-5xl">Fall Limited Edition Sneakers</h2>
+      
+      <p class="text-slate-500">
+      These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <span class=" flex justify-center items-center flex-wrap gap-[10px] w-[175px]">
+      <h3 class="font-bold text-3xl">$125.00</h3>
+      <h4 class="w-[50px]  bg-orange-100 text-center font-bold text-orange-400 rounded-[5px] p-0">50%</h4>
+      <h4 class="w-full">$250.00</h4>
+      </span>
+    
+       
+      <div class="w-full flex gap-[20px]">
+        <section  class=" flex justify-start items-center gap-[25px] bg-slate-100 rounded-[10px]">
+          <span id="Minus" class="h-full w-[55px] flex justify-center items-center rounded-[10px]"> <img class="cursor-pointer select-none" src="./images/icon-minus.svg" alt="minus"></span>
+          <span id="counter" class="font-bold select-none ">0</span>
+          <span id="Add" class="h-full w-[55px] flex justify-center items-center rounded-[10px]"><img class="cursor-pointer select-none" src="./images/icon-plus.svg" alt="add"></span>
+        </section>
+        <button id="appendToCart" class="grow p-[20px] bg-orange-500 hover:bg-[#FFAC6A] rounded-[10px] flex justify-center items-center gap-[15px] text-white shadow-2xl shadow-orange-300" ><img src="./images/icon-cart.svg" alt="cart"> Add to cart</button>  
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+  
+  
+
+</body>
+</html>
